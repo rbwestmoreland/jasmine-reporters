@@ -22,7 +22,7 @@ Report test results to the browser's title bar.
 
     jasmine.getEnv().addReporter(htmlTitleReporter);
 
-[Live Example](./examples/HtmlTitleReporter.html) | [Download](./releases/HtmlTitleReporter/)  
+[Live Example](https://rbwestmoreland.github.com/jasmine-reporters/releases/HtmlTitleReporter/1.0.0/HtmlTitleReporter.html) | [Download](./releases/HtmlTitleReporter/)  
 
 
 AutoRefreshReporter
@@ -42,7 +42,7 @@ Refreshes only occur when the page is not the active page. It doesn't refresh th
 
     jasmine.getEnv().addReporter(autoRefreshReporter);
 
-[Live Example](./examples/AutoRefreshReporter.html) | [Download](./releases/AutoRefreshReporter/)  
+[Live Example](https://rbwestmoreland.github.com/jasmine-reporters/releases/AutoRefreshReporter/1.0.0/AutoRefreshReporter.html) | [Download](./releases/AutoRefreshReporter/)  
 
 Versioning
 ---
