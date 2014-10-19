@@ -1,0 +1,45 @@
+﻿<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title>rbwestmoreland/jasmine-reporters</title>
+
+    <!--Jasmine-->
+    <link rel="icon" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.0.0/jasmine_favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.0.0/jasmine.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.0.0/jasmine.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.0.0/jasmine-html.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.0.0/boot.js"></script>
+
+    <!--Example Specs-->
+    <script type="text/javascript">
+        describe('An example suite', function () {
+            it('contains a spec that randomly passes or fails', function () {
+                var val = Math.round(Math.random() * 10);
+                var pass = val % 2 === 0;
+                expect(pass).toBeTruthy();
+            })
+        })
+    </script>
+
+    <!--HtmlTitleReporter.js-->
+    <script src="HtmlTitleReporter.js"></script>
+    <script type="text/javascript">
+        //create and configure reporter
+        var htmlTitleReporter = new jasmineReporters.HtmlTitleReporter({
+            title: true,
+            favicon: true
+        });
+
+        //add reporter to Jasmine
+        jasmine.getEnv().addReporter(htmlTitleReporter);
+    </script>
+</head>
+    <body>
+        <h1>HtmlTitleReporter</h1>
+        <p>Look at this tab's title bar. You should see the favicon and title updated to display the status of the specs.</p>
+        <p>This page contains a spec that randomly passes or fails. This is so that you can refresh the page and see the passing and failing favicon.</p>
+        <p>Go ahead, <a href="#" onclick="window.location.reload();">refresh</a> until you see a different outcome.</p>
+        <p><a href="https://github.com/rbwestmoreland/jasmine-reporters">https://github.com/rbwestmoreland/jasmine-reporters</a></p>
+        <hr />
+    </body>
+</html>

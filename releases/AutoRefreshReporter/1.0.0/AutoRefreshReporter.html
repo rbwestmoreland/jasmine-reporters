@@ -1,0 +1,44 @@
+﻿<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <title>rbwestmoreland/jasmine-reporters</title>
+
+    <!--Jasmine-->
+    <link rel="icon" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.0.0/jasmine_favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.0.0/jasmine.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.0.0/jasmine.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.0.0/jasmine-html.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.0.0/boot.js"></script>
+
+    <!--Example Specs-->
+    <script type="text/javascript">
+        describe('An example suite', function () {
+            it('contains a spec that fails', function () {
+                expect(false).toBeTruthy();
+            })
+            it('contains a spec that passes', function () {
+                expect(true).toBeTruthy();
+            })
+        })
+    </script>
+
+    <!--AutoRefreshReporter.js-->
+    <script src="AutoRefreshReporter.js"></script>
+    <script type="text/javascript">
+        //create and configure reporter
+        var autoRefreshReporter = new jasmineReporters.AutoRefreshReporter({
+            timeout: 3000
+        });
+
+        //add reporter to Jasmine
+        jasmine.getEnv().addReporter(autoRefreshReporter);
+    </script>
+</head>
+    <body>
+        <h1>AutoRefreshReporter</h1>
+        <p>Open or switch to another tab in your browser. Watch this tab, it will automatically refresh 3 seconds after all specs have completed.</p>
+        <p>Note, this page will not refresh while you are viewing it. It will only refresh when you are <b>not</b> viewing it.</p>
+        <p><a href="https://github.com/rbwestmoreland/jasmine-reporters">https://github.com/rbwestmoreland/jasmine-reporters</a></p>
+        <hr/>
+    </body>
+</html>
